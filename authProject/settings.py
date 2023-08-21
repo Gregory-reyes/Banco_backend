@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": engine,
+        "ENGINE": 'django.db.backends.postgresql_psycopg2',
         "NAME": name,
         "USER": user,
         "PASSWORD": password,

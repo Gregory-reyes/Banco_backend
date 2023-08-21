@@ -114,13 +114,13 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 
 DATABASES = {
     'default': {
+            
         "ENGINE": engine,
         "NAME": name,
         "USER": user,
         "PASSWORD": password,
         "HOST": host,
-        "PORT": port,    
-        
+        "PORT": port,
     }
 }
 

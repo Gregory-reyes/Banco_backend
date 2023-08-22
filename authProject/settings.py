@@ -41,7 +41,13 @@ SECRET_KEY = 'django-insecure-l)q$w3m+aw)n*)w*%%ff)ct^1e*yke1lfw246)@3j5tc8)rcc0
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ORIGIN_ALLOW_ALL = True
 
+"""CORS_ORIGIN_WHITELIST = (
+  'http://localhost:8080/',
+  'http://localhost:8081/',
+  'http://localhost:8082/'
+)"""
 
 # Application definition
 
@@ -54,6 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'authApp',
+    'corsheaders',
 ]
 
 SIMPLE_JWT = {
@@ -87,6 +94,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'authProject.urls'

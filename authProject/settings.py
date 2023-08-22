@@ -15,6 +15,7 @@ from datetime import timedelta
 from dotenv import load_dotenv
 import os
 
+
 load_dotenv()
 
 api_key = os.getenv("API_KEY")
@@ -113,8 +114,7 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-            
+    'default': {            
         "ENGINE": engine,
         "NAME": name,
         "USER": user,
@@ -165,3 +165,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+import django_heroku
+django_heroku.settings(locals())
